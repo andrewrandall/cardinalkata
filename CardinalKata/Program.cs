@@ -1,6 +1,4 @@
-﻿using WP = CardinalKata.WeatherParser;
-using SP = CardinalKata.SoccerParser;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,26 +10,20 @@ namespace CardinalKata
     {
         static void Main(string[] args)
         {
-            Weather();
-            Soccer();
+            Run(WeatherPath, new WeatherConfig());
+            Run(SoccerPath, new SoccerConfig());
             Console.ReadKey();
         }
 
-        static void Weather()
-        {
-            var reader = new WP.Reader();
-            var entries = reader.Read("WeatherParser\\data\\weather.dat").ToArray();
-            var smallestSpread = entries.OrderBy(e => e.TemperatureSpread).First();
-            Console.WriteLine($"Day {smallestSpread.DayNumber} has smallest spread with {smallestSpread.TemperatureSpread}");
-        }
+        const string WeatherPath = "data\\weather.dat";
+        const string SoccerPath = "data\\soccer.dat";
 
-        static void Soccer()
+        static void Run(string path, IReaderConfig config)
         {
-            // obviously I had to regionalize the name so the intended audience could understand
-            var reader = new SP.Reader();
-            var entries = reader.Read("SoccerParser\\data\\soccer.dat").ToArray();
-            var smallestSpread = entries.OrderBy(e => e.GoalsDelta).First();
-            Console.WriteLine($"Team {smallestSpread.Team} has smallest spread with {smallestSpread.GoalsDelta}");
+            var parser = new Parser();
+            var statLines = parser.Parse(path, config);
+            var smallestSpread = statLines.OrderBy(e => e.Delta).First();
+            Console.WriteLine($"{config.ObjectName} {smallestSpread.Identity} has the smallest spread with {smallestSpread.Delta}");
         }
     }
 }

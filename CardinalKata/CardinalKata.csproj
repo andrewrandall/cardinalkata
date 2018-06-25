@@ -42,21 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IReaderConfig.cs" />
+    <Compile Include="WeatherConfig.cs" />
+    <Compile Include="StatLine.cs" />
+    <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SoccerParser\Entry.cs" />
-    <Compile Include="SoccerParser\Parser.cs" />
-    <Compile Include="SoccerParser\Reader.cs" />
-    <Compile Include="WeatherParser\Entry.cs" />
-    <Compile Include="WeatherParser\Parser.cs" />
-    <Compile Include="WeatherParser\Reader.cs" />
+    <Compile Include="SoccerConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="SoccerParser\data\soccer.dat">
+    <None Include="data\soccer.dat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="WeatherParser\data\weather.dat">
+    <None Include="data\weather.dat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
