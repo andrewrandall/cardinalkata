@@ -1,9 +1,0 @@
-C:\Users\drew\source\repos\CardinalKata\CardinalKata\bin\Debug\CardinalKata.exe.config
-C:\Users\drew\source\repos\CardinalKata\CardinalKata\bin\Debug\CardinalKata.exe
-C:\Users\drew\source\repos\CardinalKata\CardinalKata\bin\Debug\CardinalKata.pdb
-C:\Users\drew\source\repos\CardinalKata\CardinalKata\obj\Debug\CardinalKata.csprojResolveAssemblyReference.cache
-C:\Users\drew\source\repos\CardinalKata\CardinalKata\obj\Debug\CardinalKata.csproj.CoreCompileInputs.cache
-C:\Users\drew\source\repos\CardinalKata\CardinalKata\obj\Debug\CardinalKata.exe
-C:\Users\drew\source\repos\CardinalKata\CardinalKata\obj\Debug\CardinalKata.pdb
-C:\Users\drew\source\repos\CardinalKata\CardinalKata\bin\Debug\data\soccer.dat
-C:\Users\drew\source\repos\CardinalKata\CardinalKata\bin\Debug\data\weather.dat
